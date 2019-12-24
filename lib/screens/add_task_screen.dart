@@ -27,7 +27,7 @@ class AddTaskScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20.0),
             ),
             SizedBox(
-              height: 10.0,
+              height: 5.0,
             ),
             FlatButton(
               color: Colors.lightBlueAccent,
