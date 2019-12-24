@@ -1,13 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AddTaskScreen extends StatelessWidget {
+class AddTaskScreen extends StatefulWidget {
+  @override
+  _AddTaskScreenState createState() => _AddTaskScreenState();
+}
+
+class _AddTaskScreenState extends State<AddTaskScreen> {
+  String newTaskTitle;
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Color.fromARGB(255, 117, 117, 117),
       child: Container(
-        padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+        padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -25,13 +31,20 @@ class AddTaskScreen extends StatelessWidget {
               autofocus: true,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20.0),
+              onChanged: (newText) {
+                print(newText);
+                newTaskTitle = newText;
+                print(newTaskTitle);
+              },
             ),
             SizedBox(
               height: 5.0,
             ),
             FlatButton(
               color: Colors.lightBlueAccent,
-              onPressed: () {},
+              onPressed: () {
+                print(newTaskTitle);
+              },
               child: Text(
                 'Add',
                 style: TextStyle(color: Colors.white, fontSize: 20),
