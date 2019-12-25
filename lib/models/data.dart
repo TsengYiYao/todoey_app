@@ -8,6 +8,10 @@ class Data extends ChangeNotifier {
     Task(name: 'Buy bread'),
   ];
 
+  int get taskCount {
+    return tasks.length;
+  }
+
   void changeString(String newString) {
 //    data = newString;
 //    notifyListeners();
