@@ -1,16 +1,10 @@
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:todoey_app/models/data.dart';
-import 'package:todoey_app/models/task.dart';
 import 'package:todoey_app/widgets/tasks_list.dart';
 import 'package:todoey_app/screens/add_task_screen.dart';
 
-class TasksScreen extends StatefulWidget {
-  @override
-  _TasksScreenState createState() => _TasksScreenState();
-}
-
-class _TasksScreenState extends State<TasksScreen> {
+class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

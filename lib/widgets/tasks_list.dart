@@ -5,16 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:todoey_app/models/data.dart';
 
 class TasksList extends StatelessWidget {
-//  //final List<Task> tasks;
-//
-//  //TasksList({this.tasks});
-//  TasksList();
-//
-//  @override
-//  _TasksListState createState() => _TasksListState();
-//}
-//
-//class _TasksListState extends State<TasksList> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
