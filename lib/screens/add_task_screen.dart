@@ -2,6 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AddTaskScreen extends StatefulWidget {
+  final Function addTaskCallback;
+
+  AddTaskScreen(this.addTaskCallback);
+
   @override
   _AddTaskScreenState createState() => _AddTaskScreenState();
 }
@@ -28,22 +32,19 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               style: TextStyle(color: Colors.lightBlueAccent, fontSize: 30),
             ),
             TextField(
-              autofocus: true,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20.0),
-              onChanged: (newText) {
-                print(newText);
-                newTaskTitle = newText;
-                print(newTaskTitle);
-              },
-            ),
+                autofocus: true,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20.0),
+                onChanged: (newText) {
+                  newTaskTitle = newText;
+                }),
             SizedBox(
               height: 5.0,
             ),
             FlatButton(
               color: Colors.lightBlueAccent,
               onPressed: () {
-                print(newTaskTitle);
+                widget.addTaskCallback(newTaskTitle);
               },
               child: Text(
                 'Add',
