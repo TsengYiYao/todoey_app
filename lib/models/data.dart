@@ -12,8 +12,8 @@ class Data extends ChangeNotifier {
     return tasks.length;
   }
 
-  void changeString(String newString) {
-//    data = newString;
-//    notifyListeners();
+  void addTask(String newTaskTitle) {
+    tasks.add(Task(name: newTaskTitle));
+    notifyListeners();
   }
 }
